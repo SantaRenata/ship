@@ -1,1 +1,48 @@
-<p>ship works!</p>
+
+<table class="table table-stripped">
+    <thead>
+        <tr class="table-warning">
+            <th>Név</th>
+            <th>Hossz</th>
+            <th>Ár</th>
+            <th>Férőhely</th>
+            <th>Utánfutó</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ship of ships">
+            <td>{{ship.name}}</td>
+            <td>{{ship.length}}</td>
+            <td>{{ship.price}}</td>
+            <td>{{ship.person}}</td>
+            <td>{{ship.trailer}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<form [formGroup]="shipForm">
+    <h4>Hajó Hozzáadása</h4>
+    <div class="col-md-2">
+        <label for="name" class="form-label">Név</label>
+        <input type="text" id="name" class="form-control" formControlName="name" >
+    </div>
+    <div class="col-md-2">
+        <label for="length" class="form-label">Hossz:</label>
+        <input type="text" id="length" class="form-control" formControlName="length">
+    </div>
+    <div class="col-md-2">
+        <label for="price" class="form-label">Ár</label>
+        <input type="text" id="price" class="form-control" formControlName="price">
+    </div>
+    <div class="col-md-2">
+        <label for="person" class="form-label">Férőhely</label>
+        <input type="text" id="person" class="form-control" formControlName="person">
+    </div>
+    <div class="col-md-2">
+        <label for="trailer" class="form-label">Utánfutó</label>
+        <input type="text" id="trailer" class="form-control" formControlName="trailer">
+    </div>
+</form>
+
+<button type="button" class="btn btn-primary" (click)="onClickAddButton()">Mentés</button>
+
