@@ -1,3 +1,13 @@
+/*
+* File: ship.component.ts
+* Author: Sánta Renáta Diána
+* Copyright: 2023, Sánta Renáta Diána
+* Group: Szoft II N
+* Date: 2023-04-18
+* Github: https://github.com/SantaRenata/
+* Licenc: GNU GPL
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApiService } from '../shared/api.service';
